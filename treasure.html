@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        header {
+            display: flex;
+            flex-direction: row;
+            background-color:darkcyan;
+            
+        }
+
+        h3 {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            background-color: brown;
+          
+        }
+
+        .flex-container>div {
+            /*div children of the flex container*/
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .row{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+           
+        }  
+        .row>div
+        {
+            background-color: burlywood;
+            margin: 5px;
+            padding: 5px;
+            font-size: 10px;
+
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+            .flex-container {
+                flex-direction: column;
+                background-color: green;
+            }
+        }
+    </style>
+    <title>Treasure Hunt by Sanjay Kumar Pilli</title>
+</head>
+
+
+
+<body>
+    <header>
+        <h3>Treasure Hunt by Sanjay Kumar Pilli</h3>
+    </header>
+
+    <div>
+        <h3>Click on the chests to search for
+            treasure</h3>
+        <div class="flex-container">
+            <div id="chests">Number of chests checked is zero</div>
+            <div id="score">Score is unknown.</div>
+            <div id="help">Help report</div>
+
+        </div>
+    </div>
+
+    <div class="flex-container1">
+        <div class="row">
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image0"
+                    onclick="check(0)"></div>
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image1"
+                    onclick="check(1)"></div>
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image2"
+                    onclick="check(2)"></div>
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image3"
+                    onclick="check(3)"></div>
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image4"
+                    onclick="check(4)"></div>
+
+        </div>
+    </div>
+    <div class="flex-container1">
+        <div class="row">
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image6"
+                    onclick="check(5)"></div>
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image7"
+                    onclick="check(6)"></div>
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image8"
+                    onclick="check(7)"></div>
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image9"
+                    onclick="check(8)"></div>
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image10"
+                    onclick="check(9)"></div>
+
+        </div>
+    </div>
+    <div class="flex-container1">
+        <div class="row">
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image12"
+                    onclick="check(10)"></div>
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image13"
+                    onclick="check(11)"></div>
+            <div><img src="help.jpg" alt="anim" width="100" ; height="100" ; id="image14"
+                    onclick="help()"></div>
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image15"
+                    onclick="check(13)"></div>
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image16"
+                    onclick="check(14)"></div>
+
+        </div>
+    </div>
+    <div class="flex-container1">
+        <div class="row">
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image18"
+                    onclick="check(15)"></div>
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image19"
+                    onclick="check(16)"></div>
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image20"
+                    onclick="check(17)"></div>
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image21"
+                    onclick="check(18)"></div>
+            <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image22"
+                    onclick="check(19)"></div>
+
+        </div>
+        <div class="flex-container1">
+            <div class="row">
+                <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image18"
+                        onclick="check(20)"></div>
+                <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image19"
+                        onclick="check(21)"></div>
+                <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image20"
+                        onclick="check(22)"></div>
+                <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image21"
+                        onclick="check(23)"></div>
+                <div><img src="chest.jpg" alt="anim" width="100" ; height="100" ; id="image22"
+                        onclick="check(24)"></div>
+
+            </div>
+        </div>
+
+</body>
+
+</html>
