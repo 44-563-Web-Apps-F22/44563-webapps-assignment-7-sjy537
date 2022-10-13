@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html> 
+    
+<head>
+    <title>Cycler Page</title>
+    <style>
+    .flex-container {
+      display: flex;  flex-direction:row;
+      background-color: #5F222B;
+  }
+
+.flex-container > div {  /*div children of the flex container*/
+  background-color: #FA193B; 
+  margin: 10px;  padding: 20px;  font-size: 30px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) { 
+	 .flex-container{
+		 flex-direction:column;
+		 background-color: #DDE539;
+	  }
+	}
+</style>
+</head>
+
+<body>
+
+	<div class="container text-center">
+        <div class="container-fluid p-5 bg-warning text-black text-center">
+            <h1>Sanjay Kuamr Pilli Builds a Cycler</h1>
+        </div><br>
+        <div class="flex-container" id="target">
+            <div class="cycler">row item 1</div>   
+            <div class="cycler">row item 2</div>  
+            <div class="cycler">row item 3</div>  
+        </div><br>
+
+        <label for="inputelm">Type something: <br></label>
+        <input class="form-control" type="text" name="input" id="inputelm" value="">
+        <br>
+
+        <p class="message"> 
+            Press the button to create an new elm of type div and then add it to the container.
+        </p>
+
+        <div class="container text-center">
+            <button class="btn btn-warning" type="submit" onclick="makeNewDiv()">Add Value</button>
+            <button class="btn btn-danger" type="submit" onclick="get()">Get</button>
+            <button class="btn btn-success" type="submit" onclick="spin()">Spin</button>
+            <button class="btn btn-success" type="submit" onclick="spin()">Swap</button>
+          </div>
+
+    </div>	
+	<script>
+        function makeNewDiv() {
+            let elm = document.createElement("div")
+            let value = document.getElementById("inputelm").value
+
+            elm.innerHTML = value
+            elm.className = "cycler"
+
+            let container = document.getElementById("target")
+            container.appendChild(elm)
+        }
+    </script>
+    <script>
+        function get() {
+       let cyclerItems  = document.getElementByClassName('cycler')
+       if(cyclerItems.length > 0){
+            cyclerItems[cyclerItems.length - 1].remove()
+       }
+
+    }
+
+    function spin() {
+            let cyclerItems = document.getElementByClassName("cycler")
+            if(cyclerItems.length > 1) {
+                removedItem = cyclerItems[cyclerItems.length-1]
+                cyclerItems[cyclerItems.length-1].remove()
+                let container = document.getElementById("target")
+                container.insertBefore(removedItem, container.firstChild)
+            }
+        }
+
+    function swap() {
+            let cyclerItems = document.getElementByClassName("cycler")
+            let container = document.getelmById("target")
+            let a = Math.floor(Math.random() * cyclerItems.length)
+            let b = Math.floor(Math.random() * cyclerItems.length)
+            let firstInnerText = document.getElementByClassName("cycler")[a]
+            let secondInnerText = document.getElementByClassName("cycler")[b]
+            if(cyclerItems.length > 1) {
+                let temp = firstInnerText.innerHTML
+                firstInnerText.innerHTML = secondInnerText.innerHTML
+                secondInnerText.innerHTML = temp
+            }
+        }  
+</script>
+</body>
+</html>	
